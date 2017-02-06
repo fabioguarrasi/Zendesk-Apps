@@ -1,0 +1,11 @@
+{
+  "author": {
+		"name" :"Fabio Guarrasi",
+	  "email": "fabioguarrasi@gmail.com"
+  },
+	"frameworkVersion": "0.5",
+	"location":"ticket_sidebar",
+  "defaultLocale": "en",
+  "private": true,
+  "singleInstall": true
+}

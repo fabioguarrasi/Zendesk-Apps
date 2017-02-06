@@ -1,0 +1,165 @@
+#widget {
+  width: 310px;
+  background-color: #263238;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  color: #CFD8DC;
+  overflow: hidden;
+}
+#widget header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: #263238;
+  font-weight: bold;
+  border: none;
+  margin: 0 auto;
+}
+#widget .thumbnail {
+  height: 250px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border: none;
+  padding: 0;
+}
+#widget .thumbnail > img {
+  display: none;
+  height: 100%;
+  max-width: none;
+}
+#widget .thumbnail > img.show {
+  display: inline-block;
+}
+#widget .thumbnail > video {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#widget .thumbnail .error {
+  display: none;
+  color: red;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+#widget .thumbnail .error.show {
+  display: block;
+}
+#widget .datepicker {
+  text-align: center;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker {
+  border: none;
+  width: 100%;
+  background-color: #263238;
+  padding: 0;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-calendar {
+  color: #CFD8DC;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-header {
+  background: #263238;
+  border: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-header .ui-datepicker-title{
+  background-color: #263238;
+  color: #CFD8DC;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-header .ui-datepicker-prev,
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  border: none;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover,
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover {
+  background-color: #263238;
+  top: 2px;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover {
+  left: 2px;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover {
+  right: 2px;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-header .ui-icon {
+  background-image: none;
+  background-color: #FFEB3B;
+  color: #263238;
+  border-radius: 10px;
+  display: block;
+  text-indent: 0;
+  font-size: .6em;
+  line-height: 18px;
+  visibility: visible;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker td .ui-state-default {
+  padding: .1em 0;
+  margin: 0 8px;
+  text-align: center;
+  border: none;
+  background-color: #263238;
+  color: #CFD8DC;
+  border: 1px solid #263238;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker td .ui-state-default:hover {
+  border-radius: 20px;
+  border-color: #FFEB3B;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker td a.ui-state-highlight.ui-state-active,
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker td a.ui-state-default.ui-state-active {
+  background-color: #FFEB3B;
+  border-color: #FFEB3B;
+  border-radius: 20px;
+  color: #263238;
+  visibility: visible;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker td.ui-state-disabled, #widget .datepicker .ui-widget.ui-widget-content.ui-datepicker td.ui-widget-content .ui-state-disabled {
+  opacity: .35;
+  background-color: #263238;
+}
+#widget .datepicker .ui-widget.ui-widget-content.ui-datepicker td.ui-datepicker-unselectable.ui-state-disabled span.ui-state-default {
+  border: none;
+  text-align: center;
+  padding: 0.4em .2em;
+  background-color: #263238;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0, .5);
+  margin: 0;
+  opacity: 0;
+  z-index: 0;
+  width: auto;
+  transition: all .4s ease-out;
+  justify-content: center;
+  align-items: center;
+}
+.modal.show {
+  opacity: 1;
+  z-index: 1000;
+}
+.modal.show img {
+  display: block;
+  max-width: 100%;
+  height: 90%;
+}
